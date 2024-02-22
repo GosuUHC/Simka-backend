@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProviderController;
+use App\Http\Controllers\CompilationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/providers', [ProviderController::class, "getAll"]);
+Route::get('/compilations', [CompilationController::class, "getAll"]);
+
