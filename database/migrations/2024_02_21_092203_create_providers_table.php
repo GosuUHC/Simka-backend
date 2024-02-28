@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('providers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->bigInteger('phone');
+            $table->string('phone');
             $table->string('tech_support_phone')->nullable()->default(null);
             $table->float('rating_overall', 3, 2);
             $table->float('rating_connection', 3, 2);

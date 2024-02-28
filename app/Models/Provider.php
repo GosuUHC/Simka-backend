@@ -14,7 +14,7 @@ class Provider extends Model
      */
     protected $hidden = ['created_at', 'updated_at'];
 
-    protected $guarded = ['created_at', 'updated_at', 'id'];
+    protected $guarded = ['id', 'created_at', 'updated_at'];
 
     protected $casts = [
         'rating_overall' => 'float',

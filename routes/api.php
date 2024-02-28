@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CompilationController;
 use App\Http\Controllers\ProviderController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -20,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/providers', [ProviderController::class, "getAll"]);
+Route::get('/compilations', [CompilationController::class, "getAll"]);
